@@ -65,7 +65,6 @@ export const convertCollectionSnapshotToMap = (collections) => {
             items
         }
     });
-    // console.log(transformedCollection);
 
     return transformedCollection.reduce((accumulator, collection) => {
         accumulator[collection.title.toLowerCase()] = collection;
@@ -88,6 +87,7 @@ export const getCurrentUser = () => {
 
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();
+
 
 export const googleProvider = new firebase.auth.GoogleAuthProvider();
 googleProvider.setCustomParameters({ prompt: 'select_account' });
